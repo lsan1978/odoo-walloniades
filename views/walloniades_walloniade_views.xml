@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Actions -->
+    <record id="action_walloniades_walloniade" model="ir.actions.act_window">
+        <field name="name">Walloniades</field>
+        <field name="res_model">walloniades.walloniade</field>
+        <field name="view_mode">list,form</field>
+
+    </record>
+
+    <record id="action_walloniades_equipe" model="ir.actions.act_window">
+        <field name="name">Equipes</field>
+        <field name="res_model">walloniades.equipe</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_walloniades_equipe_instance" model="ir.actions.act_window">
+        <field name="name">Equipes de la Walloniade</field>
+        <field name="res_model">walloniades.equipe.instance</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_walloniades_type_epreuve" model="ir.actions.act_window">
+        <field name="name">Types d'épreuve</field>
+        <field name="res_model">walloniades.type.epreuve</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_walloniades_epreuve" model="ir.actions.act_window">
+        <field name="name">Epreuves</field>
+        <field name="res_model">walloniades.epreuve</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_walloniades_epreuve_instance" model="ir.actions.act_window">
+        <field name="name">Epreuves de la walloniade</field>
+        <field name="res_model">walloniades.epreuve.instance</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_walloniades_resultat_point" model="ir.actions.act_window">
+        <field name="name">Résultats Points</field>
+        <field name="res_model">walloniades.resultat.point</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_walloniades_resultat_temps_penalite" model="ir.actions.act_window">
+        <field name="name">Résultats Temps Pénalité</field>
+        <field name="res_model">walloniades.resultat.temps.penalite</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_walloniades_resultat_temps_niveau" model="ir.actions.act_window">
+        <field name="name">Résultats Temps Niveau</field>
+        <field name="res_model">walloniades.resultat.temps.niveau</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_walloniades_resultat_temps_positif_negatif" model="ir.actions.act_window">
+        <field name="name">Résultats Temps Positif Négatif</field>
+        <field name="res_model">walloniades.resultat.temps.positif.negatif</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_walloniades_classement_line" model="ir.actions.act_window">
+        <field name="name">Classement</field>
+        <field name="res_model">walloniades.classement.line</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+
+
+    <!-- Walloniades Views -->
+
+    <!--List View-->
+
+    <record id="walloniades_walloniade_tree_view" model="ir.ui.view">
+        <field name="name">walloniades.walloniade.list.view</field>
+        <field name="model">walloniades.walloniade</field>
+        <field name="arch" type="xml">
+            <list string="Walloniade">
+
+                <field name="name" readonly="1" string="Walloniade"/>
+
+            </list>
+
+        </field>
+    </record>
+
+    <!--Form View-->
+    <record id="ewalloniades_walloniade_form_view" model="ir.ui.view">
+        <field name="name">walloniades.walloniade.form.view</field>
+        <field name="model">walloniades.walloniade</field>
+        <field name="arch" type="xml">
+            <form string="Année">
+                <header>
+                    <button name="action_generer_resultat" type="object" string="Generate" invisible="state != 'ungenerated'" class="btn btn-primary my-custom-class"/>
+                    <button name="action_debug" type="object" string="Debug" class="btn btn-primary my-custom-class"/>
+                    <field name="state" widget="statusbar" statusbar_visible="ungenerated,generated"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" placeholder="Ex: 2025" help="Entrez une année à partir de 2024"/>
+                        <field name="equipe_instance_ids"/>
+                        <field name="epreuve_instance_ids"/>
+                        <field name="state"/>
+                        <field name="classement_general_line_ids"/>
+                    </group>    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+
+
+
+</odoo>

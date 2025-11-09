@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Actions -->
+
+
+
+    <!-- Walloniades Epreuve Views -->
+
+    <!--List View-->
+
+    <record id="walloniades_epreuve_tree_view" model="ir.ui.view">
+        <field name="name">walloniades.epreuve.list.view</field>
+        <field name="model">walloniades.epreuve</field>
+        <field name="arch" type="xml">
+            <list string="Epreuve">
+
+                <field name="name" readonly="1" string="Nom de l'épreuve"/>
+                <field name="type_epreuve_id"/>
+            </list>
+
+        </field>
+    </record>
+
+    <!--Form View-->
+
+    <record id="walloniades_epreuve_form_view" model="ir.ui.view">
+        <field name="name">walloniades.epreuve.form.view</field>
+        <field name="model">walloniades.epreuve</field>
+        <field name="arch" type="xml">
+            <form string="Epreuve">
+                <sheet>
+                    <group col="1">
+                        <field name="name" placeholder="Ex: Mât de Cocagne" help="Entrez un nom d'épreuve"/>
+                        <field name="type_epreuve_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+
+
+
+</odoo>

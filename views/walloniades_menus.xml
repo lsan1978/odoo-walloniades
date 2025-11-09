@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Menu -->
+    <menuitem id="walloniades_menu_root" name="Walloniades" action="action_walloniades_walloniade">
+        
+        <menuitem id="first_level_menu_1" name="Equipes" sequence="1">
+            <menuitem id="menu_action_walloniades_equipes" action="action_walloniades_equipe"/>
+            <!--<menuitem id="menu_action4_estate_property" action="action_estate_property_tags"/>-->
+        </menuitem>
+
+        <menuitem id="first_level_menu_2" name="Epreuves" sequence="2">
+            <menuitem id="menu_action_walloniades_epreuve" action="action_walloniades_epreuve"/>
+            <!--<menuitem id="menu_action4_estate_property" action="action_estate_property_tags"/>-->
+        </menuitem>
+        
+        
+        <menuitem id="first_level_menu_3" name="Types d'épreuves" sequence="3">
+            <menuitem id="menu_action_walloniades_type_epreuve" action="action_walloniades_type_epreuve"/>
+            <!--<menuitem id="menu_action2_estate_property" action="action_estate_property"/>-->
+
+        </menuitem>
+
+        <menuitem id="first_level_menu_4" name="Test" sequence="4">
+            <menuitem id="menu_action_walloniades_classement_line" action="action_walloniades_classement_line"/>
+            <!--<menuitem id="menu_action2_estate_property" action="action_estate_property"/>-->
+
+        </menuitem>
+
+        
+        
+    </menuitem>
+
+</odoo>

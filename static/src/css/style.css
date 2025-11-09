@@ -1,0 +1,28 @@
+.my-custom-class {
+    background-color: #cba5eb !important;  /* Couleur */
+    color: white !important;               /* Couleur du texte */
+    border-radius: 10px;                   /* Bordure arrondie */
+    font-family: 'Arial';                 /* Police */
+    font-size: 12px;
+    border: 2px solid #663f86;
+}
+
+
+.o_input_spinbox {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 2px 5px;
+    width: 60px;
+}
+
+/* Masquer les flèches du navigateur si elles apparaissent */
+.o_input_spinbox::-webkit-outer-spin-button,
+.o_input_spinbox::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.o_input_spinbox[type=number] {
+    -moz-appearance: textfield;
+}

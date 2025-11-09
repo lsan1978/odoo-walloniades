@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Actions -->
+
+
+
+    <!-- Walloniades Epreuve Instance Views -->
+
+    <!--List View-->
+
+    <record id="walloniades_epreuve_instance_list_view" model="ir.ui.view">
+        <field name="name">walloniades.epreuve.instance.list.view</field>
+        <field name="model">walloniades.epreuve.instance</field>
+        <field name="arch" type="xml">
+            <list string="Epreuve">
+                <field name="sequence" widget="handle"/>
+                <field name="name" readonly="1" string="Nom de l'épreuve"/>
+                <field name="type_epreuve_id"/>
+                <button name="action_compute_classement" type="object" string="Calculer Classement" class="btn btn-primary my-custom-class"/>
+                <button name="action_compute_classement_general" type="object" string="Calculer Class. Général" class="btn btn-primary my-custom-class"/>
+                <field name="resultat_point_ids" column_invisible="1"/>
+                <field name="resultat_temps_penalite_ids" column_invisible="1"/>
+                <field name="resultat_temps_positif_negatif_ids" column_invisible="1"/>
+                <field name="resultat_temps_niveau_ids" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!--Form View-->
+
+    <record id="walloniades_epreuve_instance_form_view" model="ir.ui.view">
+        <field name="name">walloniades.epreuve.instance.form.view</field>
+        <field name="model">walloniades.epreuve.instance</field>
+        <field name="arch" type="xml">
+            <form string="Epreuve">
+                <sheet>
+                    <group col="1">
+                        <field name="epreuve_id" required="1"/>
+                        <field name="name" placeholder="Ex: Mât de Cocagne" help="Entrez un nom d'épreuve"/>
+                        <field name="type_epreuve_id"/>
+                        <field name="type_epreuve_name" invisible="1"/>
+                        <field name="temps_de_penalite" invisible="type_epreuve_name != 'Epreuve à temps et pénalités'"/>
+                        <field name="resultat_point_ids" invisible="not resultat_point_ids"/>
+                        <field name="resultat_temps_penalite_ids" invisible="not resultat_temps_penalite_ids"/>
+                        <field name="resultat_temps_positif_negatif_ids" invisible="not resultat_temps_positif_negatif_ids"/>
+                        <field name="resultat_temps_niveau_ids" invisible="not resultat_temps_niveau_ids"/>
+                        <field name="classement_line_ids" invisible="not classement_line_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+
+
+
+</odoo>

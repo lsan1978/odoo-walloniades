@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Actions -->
+    
+
+
+    <!-- Walloniades Type Epreuve Views -->
+
+    <!--List View-->
+
+    <record id="walloniades_type_epreuve_tree_view" model="ir.ui.view">
+        <field name="name">walloniades.type.epreuve.list.view</field>
+        <field name="model">walloniades.type.epreuve</field>
+        <field name="arch" type="xml">
+            <list string="TypeEpreuve">
+
+                <field name="name" readonly="1" string="Type d'épreuve"/>
+
+            </list>
+
+        </field>
+    </record>
+
+    <!--Form View-->
+    
+    <record id="walloniades_type_epreuve_form_view" model="ir.ui.view">
+        <field name="name">walloniades.type.epreuve.form.view</field>
+        <field name="model">walloniades.type.epreuve</field>
+        <field name="arch" type="xml">
+            <form string="TypeEpreuve">
+                <sheet>
+                    <group>
+                        <field name="name" placeholder="Ex: A points" help="Entrez un type d'épreuve"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+
+
+
+</odoo>

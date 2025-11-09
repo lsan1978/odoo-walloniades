@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Actions -->
+
+
+
+    <!-- Walloniades Résultat Temps Niveau Views -->
+
+    <!--List View-->
+
+    <record id="walloniades_resultat_temps_niveau_tree_view" model="ir.ui.view">
+        <field name="name">walloniades.resultat.temps.niveau.list.view</field>
+        <field name="model">walloniades.resultat.temps.niveau</field>
+        <field name="arch" type="xml">
+            <list editable="bottom" string="Res_temps_niveau">
+                <field name="sequence" widget="handle"/>
+                <field name="equipe_instance_id" readonly="1"/>
+                <field name="temps_brut" widget="float" class="o_input_spinbox"/>
+                <field name="niveau" widget="integer" class="o_input_spinbox"/>
+            </list>
+        </field>
+    </record>
+
+    <!--Form View-->
+
+    <record id="walloniades_resultat_temps_niveau_form_view" model="ir.ui.view">
+        <field name="name">walloniades.resultat.temps.niveau.form.view</field>
+        <field name="model">walloniades.resultat.temps.niveau</field>
+        <field name="arch" type="xml">
+            <form string="Epreuve">
+                <sheet>
+                    <group>
+                        <field name="equipe_instance_id"/>
+                        <field name="temps_brut" widget="float" class="o_input_spinbox"/>
+                        <field name="niveau" widget="integer" class="o_input_spinbox"/>
+                        <field name="reso_set" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+
+
+
+</odoo>

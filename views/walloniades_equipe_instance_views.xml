@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Actions -->
+
+
+
+    <!-- Walloniades Equipes Instance Views -->
+
+    <!--List View-->
+
+    <record id="walloniades_equipe_instance_tree_view" model="ir.ui.view">
+        <field name="name">walloniades.equipe.instance.list.view</field>
+        <field name="model">walloniades.equipe.instance</field>
+        <field name="arch" type="xml">
+            <list string="Equipes">
+                <field name="sequence" widget="handle"/>
+                <field name="name" readonly="1" string="Nom de l'équipe"/>
+                <!--<field name="equipe_id"/>-->
+                <!--<field name="numero" widget="integer" class="o_input_spinbox"/>-->
+
+            </list>
+
+        </field>
+    </record>
+
+    <!--Form View-->
+    <record id="walloniades_equipe_instance_form_view" model="ir.ui.view">
+        <field name="name">walloniades.equipe.instance.form.view</field>
+        <field name="model">walloniades.equipe.instance</field>
+        <field name="arch" type="xml">
+            <form string="Equipe">
+                <sheet>
+                    <group>
+                        <field name="equipe_id"/>
+                        <field name="name" placeholder="Ex: Les Fugees" help="Entrez un nom d'équipe"/>
+                        <field name="capitaine_id"/>
+                        <field name="participant_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+
+
+
+</odoo>

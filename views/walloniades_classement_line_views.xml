@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Actions -->
+
+
+
+    <!-- Walloniades Classement Line Views -->
+
+    <!--List View-->
+
+    <record id="walloniades_classement_line_tree_view" model="ir.ui.view">
+        <field name="name">walloniades.classement.line.list.view</field>
+        <field name="model">walloniades.classement.line</field>
+        <field name="arch" type="xml">
+            <list string="Classement">
+                <field name="position" readonly="1"/>
+                <field name="equipe_instance_id" readonly="1"/>
+                <field name="epreuve_instance_id" readonly="1"/>
+                <field name="walloniade_id" readonly="1"/>
+                <field name="points" readonly="1"/>
+                <field name="temps_final_string" readonly="1"/>
+            </list>
+
+        </field>
+    </record>
+
+    <!--Form View-->
+
+    <record id="walloniades_classement_line_form_view" model="ir.ui.view">
+        <field name="name">walloniades.classement.line.form.view</field>
+        <field name="model">walloniades.classement.line</field>
+        <field name="arch" type="xml">
+            <form string="Classement">
+                <sheet>
+                    <group>
+                        <field name="equipe_instance_id"/>
+                        <field name="epreuve_instance_id"/>
+                        <field name="walloniade_id"/>
+                        <field name="points"/>
+                        <field name="position"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+
+
+
+</odoo>

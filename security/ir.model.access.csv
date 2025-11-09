@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_walloniades_walloniade,walloniades.walloniade,model_walloniades_walloniade,base.group_user,1,1,1,1
+access_walloniades_equipe,walloniades.equipe,model_walloniades_equipe,base.group_user,1,1,1,1
+access_walloniades_type_epreuve,walloniades.type.epreuve,model_walloniades_type_epreuve,base.group_user,1,1,1,1
+access_walloniades_epreuve,walloniades.epreuve,model_walloniades_epreuve,base.group_user,1,1,1,1
+access_walloniades_resultat_point,walloniades.resultat.point,model_walloniades_resultat_point,base.group_user,1,1,1,1
+access_walloniades_epreuve_instance,walloniades.epreuve.instance,model_walloniades_epreuve_instance,base.group_user,1,1,1,1
+access_walloniades_equipe_instance,walloniades.equipe.instance,model_walloniades_equipe_instance,base.group_user,1,1,1,1
+access_walloniades_resultat_temps_penalite,walloniades.resultat.temps.penalite,model_walloniades_resultat_temps_penalite,base.group_user,1,1,1,1
+access_walloniades_resultat_temps_positif_negatif,walloniades.resultat.temps.positif.negatif,model_walloniades_resultat_temps_positif_negatif,base.group_user,1,1,1,1
+access_walloniades_resultat_temps_niveau,walloniades.resultat.temps.niveau,model_walloniades_resultat_temps_niveau,base.group_user,1,1,1,1
+access_walloniades_classement_line,walloniades.classement.line,model_walloniades_classement_line,base.group_user,1,1,1,1
+access_walloniades_classement_general__line,walloniades.classement.general.line,model_walloniades_classement_general_line,base.group_user,1,1,1,1
