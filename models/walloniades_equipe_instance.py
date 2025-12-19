@@ -15,7 +15,7 @@ class WalloniadesEquipeInstance(models.Model):
     walloniade_id = fields.Many2one("walloniades.walloniade", string = "Walloniade", required=True, ondelete="cascade")
     name = fields.Char(related="equipe_id.name", store=True)
     capitaine_id= fields.Many2one(related="equipe_id.capitaine_id", store=True)
-    participant_ids = fields.Oney2many("res.partner",compute="_compute_participant_ids",string="Participants",readonly=True)
+    participant_ids = fields.One2many("res.partner",compute="_compute_participant_ids",string="Participants",readonly=True)
     numero = fields.Integer('Numéro attribué')
     sequence = fields.Integer('Sequence', default=1)
     #nbre_victoire = fields.Integer("Nombre d'épreuves remportées", default=0)
