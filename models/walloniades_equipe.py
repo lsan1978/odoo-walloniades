@@ -14,6 +14,6 @@ class WalloniadesEquipe(models.Model):
     
     name = fields.Char(string="Nom de l'équipe", copy=True)
     capitaine_id= fields.Many2one("res.partner", string = "Capitaine", copy = True, required=True)
-    participant_ids = fields.Many2many("res.partner",  string = "Participants", copy=True)
+    participant_ids = fields.Oney2many("res.partner", "equipe_id" , string = "Participants", copy=True)
     #walloniade_id = fields.Many2one("walloniades.walloniade", string = "Walloniade", required=True, ondelete="cascade")
     
